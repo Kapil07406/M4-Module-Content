@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Math Object</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Math Methods</h1>
+
+    <button onclick="calculateMath()">
+        Calculate
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        function calculateMath() {
+
+            let number = 4.6;
+
+            let result = "";
+
+            result += "Original Number: " + number + "<br>";
+            result += "Round: " + Math.round(number) + "<br>";
+            result += "Floor: " + Math.floor(number) + "<br>";
+            result += "Ceil: " + Math.ceil(number) + "<br>";
+            result += "Square Root of 25: " + Math.sqrt(25) + "<br>";
+            result += "Power of 2: " + Math.pow(2, 3) + "<br>";
+            result += "Absolute Value: " + Math.abs(-10) + "<br>";
+            result += "Maximum: " + Math.max(10, 20, 30) + "<br>";
+            result += "Minimum: " + Math.min(10, 20, 30) + "<br>";
+
+            // Random number between 1 and 10
+
+            let randomNumber =
+                Math.floor(Math.random() * 10) + 1;
+
+            result += "Random Number: " + randomNumber;
+
+            document.getElementById("output").innerHTML =
+                result;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

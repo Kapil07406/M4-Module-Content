@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Marks Report</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eaf2f8;
+            padding: 30px;
+        }
+
+        .report {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d6efd;
+        }
+
+        button {
+            background: #0d6efd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        li {
+            padding: 8px;
+        }
+
+        #result {
+            background: #e8f5e9;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="report">
+
+        <h2>Student Marks Report</h2>
+
+        <h3>Student: Rahul</h3>
+
+        <button onclick="generateReport()">
+            Generate Report
+        </button>
+
+        <ul id="subjectList"></ul>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        // Arrays
+
+        let subjects = [
+            "English",
+            "Maths",
+            "Science",
+            "Computer",
+            "Hindi"
+        ];
+
+        let marks = [80, 90, 85, 95, 75];
+
+        // Function to generate report
+
+        function generateReport() {
+
+            let list = document.getElementById("subjectList");
+
+            list.innerHTML = "";
+
+            // Loop through subjects
+
+            for (let i = 0; i < subjects.length; i++) {
+
+                list.innerHTML +=
+                    "<li>" + subjects[i] +
+                    " : " + marks[i] + "</li>";
+
+            }
+
+            // Array methods
+
+            let total = marks.reduce(
+                function (sum, mark) {
+                    return sum + mark;
+                }, 0
+            );
+
+            let average = total / marks.length;
+
+            let highest = Math.max(...marks);
+
+            let lowest = Math.min(...marks);
+
+            // Display result
+
+            document.getElementById("result").innerHTML =
+
+                "<h3>Result Summary</h3>" +
+
+                "Total Marks: " + total + "<br><br>" +
+
+                "Average Marks: " + average + "<br><br>" +
+
+                "Highest Marks: " + highest + "<br><br>" +
+
+                "Lowest Marks: " + lowest + "<br><br>" +
+
+                "Status: " +
+                (average >= 40 ? "Passed" : "Failed");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

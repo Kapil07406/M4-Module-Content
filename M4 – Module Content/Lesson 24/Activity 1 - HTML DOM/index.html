@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Introduction to HTML DOM</title>
+</head>
+
+<body>
+
+    <h1 id="heading">Hello Students!</h1>
+
+    <p id="message">
+        Welcome to our JavaScript class.
+    </p>
+
+    <button onclick="changeContent()">
+        Change Content
+    </button>
+
+    <script>
+
+        function changeContent() {
+
+            // Select heading using ID
+
+            document.getElementById("heading").innerHTML =
+                "Welcome to HTML DOM!";
+
+            // Select paragraph using ID
+
+            document.getElementById("message").textContent =
+                "JavaScript can change webpage content.";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

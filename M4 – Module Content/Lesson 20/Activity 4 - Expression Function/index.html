@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Function Expression</title>
+</head>
+
+<body>
+
+    <h1>Function Expression</h1>
+
+    <button onclick="showSquare()">
+        Calculate Square
+    </button>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Function expression
+
+        const square = function (number) {
+
+            return number * number;
+
+        };
+
+        // Calling the function
+
+        function showSquare() {
+
+            let result = square(5);
+
+            document.getElementById("output").innerHTML =
+                "Square of 5 is: " + result;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

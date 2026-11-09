@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Properties</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Object Properties</h1>
+
+    <button onclick="showDetails()">
+        Show Original Details
+    </button>
+
+    <button onclick="updateDetails()">
+        Update Price
+    </button>
+
+    <button onclick="addProperty()">
+        Add Color
+    </button>
+
+    <button onclick="deleteProperty()">
+        Delete Price
+    </button>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Create object
+
+        let mobile = {
+            brand: "Samsung",
+            model: "Galaxy A15",
+            price: 20000
+        };
+
+        // Display object
+
+        function showDetails() {
+
+            document.getElementById("output").innerHTML =
+                "Brand: " + mobile.brand + "<br>" +
+                "Model: " + mobile["model"] + "<br>" +
+                "Price: " + mobile.price + "<br>" +
+                "Color: " + (mobile.color || "Not added");
+
+        }
+
+        // Update property
+
+        function updateDetails() {
+
+            mobile.price = 25000;
+            showDetails();
+
+        }
+
+        // Add property
+
+        function addProperty() {
+
+            mobile.color = "Black";
+            showDetails();
+
+        }
+
+        // Delete property
+
+        function deleteProperty() {
+
+            delete mobile.price;
+            showDetails();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

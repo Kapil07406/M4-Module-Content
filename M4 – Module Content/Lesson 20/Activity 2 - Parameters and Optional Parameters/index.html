@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Function Parameters</title>
+</head>
+
+<body>
+
+    <h1>Function Parameters</h1>
+
+    <button onclick="studentInfo('Rahul', 15)">
+        Student 1
+    </button>
+
+    <button onclick="studentInfo('Priya', 14)">
+        Student 2
+    </button>
+
+    <button onclick="welcomeStudent()">
+        Default Student
+    </button>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Function with parameters
+
+        function studentInfo(name, age) {
+
+            document.getElementById("output").innerHTML =
+                "Student Name: " + name +
+                "<br>Student Age: " + age;
+
+        }
+
+        // Function with default parameter
+
+        function welcomeStudent(name = "Student") {
+
+            document.getElementById("output").innerHTML =
+                "Welcome " + name;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

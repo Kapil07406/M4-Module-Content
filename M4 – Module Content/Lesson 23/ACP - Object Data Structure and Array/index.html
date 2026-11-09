@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d6efd;
+        }
+
+        .student {
+            background: #f1f5f9;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #summary {
+            background: #e8f5e9;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Student Management System</h2>
+
+        <button onclick="showStudents()">
+            Show Student Records
+        </button>
+
+        <div id="output"></div>
+
+        <div id="summary"></div>
+
+    </div>
+
+    <script>
+
+        // Array of student objects
+
+        let students = [
+
+            {
+                name: "Rahul",
+                age: 15,
+                class: 10,
+                marks: 85
+            },
+
+            {
+                name: "Priya",
+                age: 14,
+                class: 9,
+                marks: 92
+            },
+
+            {
+                name: "Aman",
+                age: 15,
+                class: 10,
+                marks: 78
+            }
+
+        ];
+
+        // Function to display students
+
+        function showStudents() {
+
+            let result = "";
+
+            let marksArray = [];
+
+            let total = 0;
+
+            // Loop through student objects
+
+            for (let i = 0; i < students.length; i++) {
+
+                let student = students[i];
+
+                result +=
+                    "<div class='student'>" +
+                    "<h3>" + student.name + "</h3>" +
+                    "Age: " + student.age + "<br>" +
+                    "Class: " + student.class + "<br>" +
+                    "Marks: " + student.marks +
+                    "</div>";
+
+                marksArray.push(student.marks);
+
+                total += student.marks;
+
+            }
+
+            let highest = Math.max(...marksArray);
+
+            let average = total / students.length;
+
+            document.getElementById("output").innerHTML =
+                result;
+
+            document.getElementById("summary").innerHTML =
+
+                "<h3>Student Summary</h3>" +
+
+                "Total Students: " + students.length + "<br><br>" +
+
+                "Total Marks: " + total + "<br><br>" +
+
+                "Highest Marks: " + highest + "<br><br>" +
+
+                "Average Marks: " + average.toFixed(2);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

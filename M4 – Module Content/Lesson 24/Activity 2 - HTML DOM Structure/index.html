@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Tree Structure</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h1 id="heading">My Website</h1>
+
+        <p id="paragraph">
+            Welcome to my website.
+        </p>
+
+        <button id="myButton">
+            Click Me
+        </button>
+
+    </div>
+
+    <script>
+
+        let container = document.getElementById("container");
+
+        let heading = document.getElementById("heading");
+
+        let paragraph = document.getElementById("paragraph");
+
+        // Display parent and child information
+
+        console.log("Container:", container);
+
+        console.log("Heading:", heading);
+
+        console.log("Paragraph:", paragraph);
+
+        console.log("Parent:", heading.parentElement);
+
+        console.log("Children:", container.children);
+
+        console.log("First Child:", container.firstElementChild);
+
+    </script>
+
+</body>
+
+</html>

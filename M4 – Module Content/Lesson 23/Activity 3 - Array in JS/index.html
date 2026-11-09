@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array</title>
+</head>
+
+<body>
+
+    <h1>Student Names Using Array</h1>
+
+    <button onclick="showStudents()">
+        Show Students
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Creating an array
+
+        let students = [
+            "Rahul",
+            "Priya",
+            "Aman",
+            "Neha",
+            "Rohit"
+        ];
+
+        function showStudents() {
+
+            let result = "";
+
+            // Display array elements using a loop
+
+            for (let i = 0; i < students.length; i++) {
+
+                result +=
+                    "Index " + i + ": " +
+                    students[i] + "<br>";
+
+            }
+
+            document.getElementById("output").innerHTML =
+                result;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

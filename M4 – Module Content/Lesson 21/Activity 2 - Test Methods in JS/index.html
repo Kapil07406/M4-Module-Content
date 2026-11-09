@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test JavaScript Methods</title>
+</head>
+
+<body>
+
+    <h1>Testing JavaScript Methods</h1>
+
+    <script>
+
+        // String length
+
+        let studentName = "Rahul";
+
+        console.log("Name: " + studentName);
+        console.log("Name Length: " + studentName.length);
+
+        // Number methods
+
+        let marks = 85.6789;
+
+        console.log("Original Marks: " + marks);
+        console.log("Fixed Marks: " + marks.toFixed(2));
+        console.log("Rounded Marks: " + Math.round(marks));
+
+        // Array methods
+
+        let numbers = [40, 10, 30, 20];
+
+        console.log("Original Array: " + numbers);
+
+        numbers.sort(function (a, b) {
+            return a - b;
+        });
+
+        console.log("Sorted Array: " + numbers);
+
+        numbers.reverse();
+
+        console.log("Reversed Array: " + numbers);
+
+    </script>
+
+</body>
+
+</html>

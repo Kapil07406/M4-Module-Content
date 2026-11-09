@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Call Stack</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Call Stack</h1>
+
+    <button onclick="startProgram()">
+        Start Program
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        function first() {
+
+            console.log("First Function");
+
+            document.getElementById("output").innerHTML +=
+                "First Function<br>";
+
+        }
+
+        function second() {
+
+            first();
+
+            console.log("Second Function");
+
+            document.getElementById("output").innerHTML +=
+                "Second Function<br>";
+
+        }
+
+        function third() {
+
+            second();
+
+            console.log("Third Function");
+
+            document.getElementById("output").innerHTML +=
+                "Third Function<br>";
+
+        }
+
+        function startProgram() {
+
+            document.getElementById("output").innerHTML = "";
+
+            third();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

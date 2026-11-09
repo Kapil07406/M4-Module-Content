@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Methods</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String and Array Methods</h1>
+
+    <script>
+
+        // String Methods
+
+        let name = "  javascript  ";
+
+        console.log("Original: " + name);
+        console.log("Uppercase: " + name.toUpperCase());
+        console.log("Lowercase: " + name.toLowerCase());
+        console.log("Trim: " + name.trim());
+        console.log("Includes: " + name.includes("script"));
+        console.log("Slice: " + name.slice(2, 6));
+        console.log("Replace: " + name.replace("javascript", "Python"));
+
+        // Array Methods
+
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        console.log("Original Array: " + fruits);
+
+        fruits.push("Orange");
+        console.log("After Push: " + fruits);
+
+        fruits.pop();
+        console.log("After Pop: " + fruits);
+
+        fruits.unshift("Grapes");
+        console.log("After Unshift: " + fruits);
+
+        fruits.shift();
+        console.log("After Shift: " + fruits);
+
+        console.log("Includes Mango: " + fruits.includes("Mango"));
+
+        console.log("Join: " + fruits.join(" - "));
+
+    </script>
+
+</body>
+
+</html>

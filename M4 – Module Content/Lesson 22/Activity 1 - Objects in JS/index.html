@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Objects</title>
+</head>
+
+<body>
+
+    <h1>Student Information</h1>
+
+    <button onclick="showStudent()">
+        Show Student Details
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Creating an object
+
+        let student = {
+            name: "Rahul",
+            age: 15,
+            class: 10,
+            city: "Delhi"
+        };
+
+        // Function to display object details
+
+        function showStudent() {
+
+            document.getElementById("output").innerHTML =
+                "Name: " + student.name + "<br>" +
+                "Age: " + student.age + "<br>" +
+                "Class: " + student.class + "<br>" +
+                "City: " + student.city;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

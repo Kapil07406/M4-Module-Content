@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d6efd;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px 2px;
+        }
+
+        .clear {
+            background: #dc3545;
+        }
+
+        #output {
+            background: #e8f5e9;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Student Registration</h2>
+
+        <input type="text" id="name" placeholder="Enter Student Name">
+
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <input type="text" id="class" placeholder="Enter Class">
+
+        <br>
+
+        <button onclick="registerStudent()">
+            Submit
+        </button>
+
+        <button class="clear" onclick="clearForm()">
+            Clear
+        </button>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script>
+
+        // Accessing HTML input values
+
+        function registerStudent() {
+
+            let name =
+                document.getElementById("name").value.trim();
+
+            let age =
+                document.getElementById("age").value;
+
+            let studentClass =
+                document.getElementById("class").value.trim();
+
+            if (name === "" || age === "" || studentClass === "") {
+
+                document.getElementById("output").innerHTML =
+                    "Please fill all the fields.";
+
+                return;
+
+            }
+
+            // Display student information
+
+            document.getElementById("output").innerHTML =
+
+                "<h3>Registration Successful!</h3>" +
+
+                "Welcome " + name + "<br><br>" +
+
+                "Age: " + age + "<br><br>" +
+
+                "Class: " + studentClass;
+
+        }
+
+        // Clear form
+
+        function clearForm() {
+
+            document.getElementById("name").value = "";
+
+            document.getElementById("age").value = "";
+
+            document.getElementById("class").value = "";
+
+            document.getElementById("output").innerHTML = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

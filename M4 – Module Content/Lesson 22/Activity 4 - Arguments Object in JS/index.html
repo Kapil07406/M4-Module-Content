@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arguments Object</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Arguments Object</h1>
+
+    <button onclick="showArguments()">
+        Show Arguments
+    </button>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Function using arguments object
+
+        function showNumbers() {
+
+            let result = "";
+
+            result += "Total Arguments: " +
+                arguments.length + "<br><br>";
+
+            result += "First Argument: " +
+                arguments[0] + "<br>";
+
+            result += "Second Argument: " +
+                arguments[1] + "<br>";
+
+            result += "Third Argument: " +
+                arguments[2] + "<br>";
+
+            result += "<br>All Arguments:<br>";
+
+            for (let i = 0; i < arguments.length; i++) {
+
+                result += arguments[i] + "<br>";
+
+            }
+
+            document.getElementById("output").innerHTML =
+                result;
+
+        }
+
+        function showArguments() {
+
+            showNumbers(10, 20, 30, 40, 50);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

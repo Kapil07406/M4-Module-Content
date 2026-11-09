@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array Methods</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Array Methods</h1>
+
+    <button onclick="showOriginal()">Original Array</button>
+    <button onclick="addFruit()">Push</button>
+    <button onclick="removeFruit()">Pop</button>
+    <button onclick="addFirst()">Unshift</button>
+    <button onclick="removeFirst()">Shift</button>
+    <button onclick="searchFruit()">Search</button>
+
+    <p id="output"></p>
+
+    <script>
+
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        function displayFruits(message) {
+
+            document.getElementById("output").innerHTML =
+                message + "<br>" +
+                "Array: " + fruits.join(", ") + "<br>" +
+                "Total Items: " + fruits.length;
+
+        }
+
+        function showOriginal() {
+
+            fruits = ["Apple", "Banana", "Mango"];
+
+            displayFruits("Original Array");
+
+        }
+
+        function addFruit() {
+
+            fruits.push("Orange");
+
+            displayFruits("After Push");
+
+        }
+
+        function removeFruit() {
+
+            fruits.pop();
+
+            displayFruits("After Pop");
+
+        }
+
+        function addFirst() {
+
+            fruits.unshift("Grapes");
+
+            displayFruits("After Unshift");
+
+        }
+
+        function removeFirst() {
+
+            fruits.shift();
+
+            displayFruits("After Shift");
+
+        }
+
+        function searchFruit() {
+
+            let found = fruits.includes("Mango");
+
+            displayFruits("Mango Found: " + found);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
